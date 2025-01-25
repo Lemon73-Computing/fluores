@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { invoke } from "@tauri-apps/api/core";
 import '@mdi/font/css/materialdesignicons.css';
 
 // const greetMsg = ref("");
@@ -40,7 +39,7 @@ const items = [
 
 const renderKey = ref(0)
 function removeItem(index: number) {
-  this.items.splice(index, 1);
+  (this as any).items.splice(index, 1);
   renderKey.value++; // Re-render the list
   console.log(items);
 }
