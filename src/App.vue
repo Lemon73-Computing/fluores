@@ -1,17 +1,66 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { invoke } from "@tauri-apps/api/core";
+import '@mdi/font/css/materialdesignicons.css';
 
-const greetMsg = ref("");
-const name = ref("");
-
-async function greet() {
-  // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-  greetMsg.value = await invoke("greet", { name: name.value });
-}
+// const greetMsg = ref("");
+// const name = ref("");
+// 
+// async function greet() {
+//   // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
+//   greetMsg.value = await invoke("greet", { name: name.value });
+// }
 </script>
 
 <template>
+  <v-footer>
+    <v-row justify="center">
+      <v-col align="center">
+        <v-btn prepend-icon="mdi-home" variant="outlined">Home</v-btn>
+        <v-btn prepend-icon="mdi-cog" variant="outlined">Config</v-btn>
+
+        <v-btn icon="mdi-plus" variant="outlined"></v-btn><!-- Add new resouces -->
+        
+        <!--
+        <v-btn prepend-icon="mdi-check-all">Select all resources</v-btn>
+        <v-btn prepend-icon="mdi-file-search-outline">Search resources</v-btn>
+        <v-btn>v Download selected resources</v-btn>
+        <v-btn>x Remove selected resources</v-btn>
+        <v-btn>/ Diselect all resources</v-btn>
+        -->
+      </v-col>
+    </v-row>
+  </v-footer>
+  <main>
+    <v-card
+    class="mx-auto my-8"
+    elevation="16"
+    max-width="344"
+    >
+      <v-card-item>
+        <v-card-title>
+          Item title
+        </v-card-title>
+
+        <v-card-subtitle>
+          Tags
+        </v-card-subtitle>
+      </v-card-item>
+
+      <v-card-text>
+        Informations...
+      </v-card-text>
+
+      <v-card-actions>
+        <v-btn icon="mdi-note-edit"></v-btn>
+        <v-btn icon="mdi-download"></v-btn>
+        <v-btn icon="mdi-delete"></v-btn>
+        <!-- -> in this list or in local files -->
+      </v-card-actions>
+    </v-card>
+  </main>
+
+  <!-- 
   <main class="container">
     <h1>Welcome to Tauri + Vue</h1>
 
@@ -34,9 +83,11 @@ async function greet() {
     </form>
     <p>{{ greetMsg }}</p>
   </main>
+  -->
 </template>
 
 <style scoped>
+/*
 .logo.vite:hover {
   filter: drop-shadow(0 0 2em #747bff);
 }
@@ -44,9 +95,11 @@ async function greet() {
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #249b73);
 }
+*/
 
 </style>
 <style>
+/*
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -157,4 +210,5 @@ button {
   }
 }
 
+*/
 </style>
