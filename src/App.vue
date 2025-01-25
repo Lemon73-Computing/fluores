@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import '@mdi/font/css/materialdesignicons.css';
+import Footer from './Footer.vue';
 
 // const greetMsg = ref("");
 // const name = ref("");
@@ -47,24 +48,7 @@ function removeItem(index: number) {
 </script>
 
 <template>
-  <v-footer>
-    <v-row justify="center">
-      <v-col align="center">
-        <v-btn prepend-icon="mdi-home" variant="outlined">Home</v-btn>
-        <v-btn prepend-icon="mdi-cog" variant="outlined">Config</v-btn>
-
-        <v-btn icon="mdi-plus" variant="outlined"></v-btn><!-- Add new resouces -->
-        
-        <!--
-        <v-btn prepend-icon="mdi-check-all">Select all resources</v-btn>
-        <v-btn prepend-icon="mdi-file-search-outline">Search resources</v-btn>
-        <v-btn>v Download selected resources</v-btn>
-        <v-btn>x Remove selected resources</v-btn>
-        <v-btn>/ Diselect all resources</v-btn>
-        -->
-      </v-col>
-    </v-row>
-  </v-footer>
+  <Footer/>
   <main :key="renderKey">
     <v-card
     class="mx-auto my-8"
