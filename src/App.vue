@@ -38,6 +38,13 @@ const items = [
   }
 ]
 
+const renderKey = ref(0)
+function removeItem(index: number) {
+  this.items.splice(index, 1);
+  renderKey.value++; // Re-render the list
+  console.log(items);
+}
+
 </script>
 
 <template>
@@ -59,12 +66,12 @@ const items = [
       </v-col>
     </v-row>
   </v-footer>
-  <main>
+  <main :key="renderKey">
     <v-card
     class="mx-auto my-8"
     elevation="16"
     max-width="344"
-    v-for="item in items"
+    v-for="(item, index) in items"
     >
       <v-card-item>
         <v-card-title>
@@ -87,7 +94,7 @@ const items = [
       <v-card-actions>
         <v-btn icon="mdi-note-edit"></v-btn>
         <v-btn icon="mdi-download"></v-btn>
-        <v-btn icon="mdi-delete"></v-btn>
+        <v-btn icon="mdi-delete" @click="removeItem(index)"></v-btn>
         <!-- -> in this list or in local files -->
       </v-card-actions>
     </v-card>
