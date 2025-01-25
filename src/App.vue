@@ -10,6 +10,34 @@ import '@mdi/font/css/materialdesignicons.css';
 //   // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
 //   greetMsg.value = await invoke("greet", { name: name.value });
 // }
+
+const items = [
+  {
+    title: "Bonnie Brae",
+    url: "https://example.com",
+    tags: ["America", "San Diego"],
+    info: "These are mostly grown in San Diego, California."
+  },
+  {
+    title: "Eureka",
+    url: "https://example.com",
+    tags: ["Italy"],
+    info: "Four Seasons Lemon"
+  },
+  {
+    title: "Femminello St. Teresa",
+    url: "https://example.com",
+    tags: ["Italy"],
+    info: "It generally produces juice."
+  },
+  {
+    title: "Yen Ben",
+    url: "https://example.com",
+    tags: ["Australia"],
+    info: "Australien Lemon"
+  }
+]
+
 </script>
 
 <template>
@@ -36,19 +64,24 @@ import '@mdi/font/css/materialdesignicons.css';
     class="mx-auto my-8"
     elevation="16"
     max-width="344"
+    v-for="item in items"
     >
       <v-card-item>
         <v-card-title>
-          Item title
+          {{ item.title }}
         </v-card-title>
 
         <v-card-subtitle>
-          Tags
+          {{ item.url }}
+        </v-card-subtitle>
+
+        <v-card-subtitle>
+          <span v-for="tag in item.tags">{{ tag }}, </span>
         </v-card-subtitle>
       </v-card-item>
 
       <v-card-text>
-        Informations...
+        {{ item.info }}
       </v-card-text>
 
       <v-card-actions>
@@ -99,6 +132,11 @@ import '@mdi/font/css/materialdesignicons.css';
 
 </style>
 <style>
+::selection {
+  background-color: #ff649f;
+  color: #f6f6f6;
+}
+
 /*
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
