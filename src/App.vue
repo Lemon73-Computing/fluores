@@ -33,8 +33,8 @@ const items = [
 
 // Remove an item from the list
 const renderKey = ref(0)
-function removeItem(index: number) {
-  (this as any).items.splice(index, 1);
+function removeItem(this: any, index: number) {
+  this.items.splice(index, 1);
   renderKey.value++; // Re-render the list
   console.log(items);
 }
