@@ -7,13 +7,13 @@ import Footer from './Footer.vue';
 const items = [
   {
     title: "Bonnie Brae",
-    url: "https://example.com",
+    url: "https://en.wikipedia.org/wiki/Bonnie_Brae_Lemon",
     tags: ["America", "San Diego"],
     info: "These are mostly grown in San Diego, California."
   },
   {
     title: "Eureka",
-    url: "https://example.com",
+    url: "https://citrusaustralia.com.au/wp-content/uploads/Eureka.pdf",
     tags: ["Italy"],
     info: "Four Seasons Lemon"
   },
@@ -25,7 +25,7 @@ const items = [
   },
   {
     title: "Yen Ben",
-    url: "https://example.com",
+    url: "https://citrusaustralia.com.au/wp-content/uploads/Yen-Ben.pdf",
     tags: ["Australia"],
     info: "Australien Lemon"
   }
