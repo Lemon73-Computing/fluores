@@ -1,3 +1,7 @@
+<script setup>
+import NewResource from './NewResource.vue';
+</script>
+
 <template>
   <v-footer>
     <v-row justify="center">
@@ -5,7 +9,8 @@
         <v-btn prepend-icon="mdi-home" color="primary" variant="outlined">Home</v-btn>
         <v-btn prepend-icon="mdi-cog" color="primary" variant="outlined">Config</v-btn>
 
-        <v-btn icon="mdi-playlist-plus" color="indigo" variant="outlined"></v-btn><!-- Add new resouces -->
+        <!-- <v-btn icon="mdi-playlist-plus" color="indigo" variant="outlined"></v-btn> -->
+        <NewResource/>
         
         <!--
         <v-btn prepend-icon="mdi-check-all">Select all resources</v-btn>

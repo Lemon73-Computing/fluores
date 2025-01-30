@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import '@mdi/font/css/materialdesignicons.css';
-import Footer from './Footer.vue';
+import Footer from './components/Footer.vue';
 
 // Sample data
 const items = [
