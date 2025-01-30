@@ -69,10 +69,10 @@ function removeItem(this: any, index: number) {
         </v-card-text>
 
         <v-card-actions>
-          <v-btn icon="mdi-note-edit"></v-btn>
-          <v-btn icon="mdi-download"></v-btn>
-          <v-btn icon="mdi-delete" @click="removeItem(index)"></v-btn>
-          <!-- -> in this list or in local files -->
+          <v-btn icon="mdi-folder-edit" color="green-lighten-2"></v-btn>
+          <v-btn icon="mdi-folder-arrow-down" color="blue-lighten-2"></v-btn>
+          <v-btn icon="mdi-folder-remove" color="red-lighten-2"></v-btn><!-- Remove this item on my storage -->
+          <v-btn icon="mdi-playlist-remove" color="red-lighten-2" @click="removeItem(index)"></v-btn><!-- Remove this item on this list -->
         </v-card-actions>
       </v-card>
     </main>
